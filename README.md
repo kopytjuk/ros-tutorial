@@ -10,7 +10,11 @@ ROS tutorial from [http://wiki.ros.org/action/fullsearch/ROS/Tutorials](ROS tuto
     - [listener.cpp](src/publish-subscribe-model/listener.cpp)
     - [talker.cpp](src/publish-subscribe-model/listener.cpp)
 
-## How to run
+- Server/Client node pair
+    - [add_two_ints_server.cpp](src/service-client-model/add_two_ints_server.cpp)
+    - [add_two_ints_client.cpp](src/service-client-model/add_two_ints_client.cpp)
+
+## How to compile
 
 This repo contains a single package which has to be integrated into the catkin workspace.
 
@@ -21,3 +25,33 @@ This repo contains a single package which has to be integrated into the catkin w
     cd ~/catkin_ws
     catkin_make
     ```
+
+## Run
+
+### Publisher/Subscriber
+
+```shell
+roslaunch beginner_tutorials talk-and-listen.launch
+```
+
+### Server only
+
+Server only:
+
+```shell
+roslaunch beginner_tutorials only-server.launch
+```
+
+Then you can query the server (in a new terminal window):
+
+```shell
+rosservice call /add_two_ints 50 60
+```
+
+### Server & Client
+
+Server only:
+
+```shell
+roslaunch beginner_tutorials server-client.launch
+```

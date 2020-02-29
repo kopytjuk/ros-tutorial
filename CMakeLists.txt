@@ -139,8 +139,13 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/beginner_tutorials_node.cpp)
 
+# Publisher & Subscriber model
 add_executable(talker src/publish-subscribe-model/talker.cpp)
 add_executable(listener src/publish-subscribe-model/listener.cpp)
+
+# Service/Client model
+add_executable(add_two_ints_client src/service-client-model/add_two_ints_client.cpp)
+add_executable(add_two_ints_server src/service-client-model/add_two_ints_server.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -152,16 +157,26 @@ add_executable(listener src/publish-subscribe-model/listener.cpp)
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+# Publisher & Subscriber model
 add_dependencies(talker beginner_tutorials_generate_messages_cpp)
 add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+
+# Service/Client model
+add_dependencies(add_two_ints_server beginner_tutorials_gencpp)
+add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
 
+# Publisher & Subscriber model
 target_link_libraries(talker ${catkin_LIBRARIES})
 target_link_libraries(listener ${catkin_LIBRARIES})
+
+# Service/Client model
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 
 #############
 ## Install ##

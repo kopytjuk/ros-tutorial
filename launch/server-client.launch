@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="beginner_tutorials" name="server" type="add_two_ints_server"/>
+    <node pkg="beginner_tutorials" name="client" type="add_two_ints_client" args="10 20"/>
+</launch>

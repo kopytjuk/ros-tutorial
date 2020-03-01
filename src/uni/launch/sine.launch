@@ -1,0 +1,5 @@
+<launch>
+    <param name="sampling_time" type="double" value="0.01" />
+    <node pkg="uni" name="sine" type="sine_node"/>
+    <node pkg="rqt_gui" name="rqt" type="rqt_gui"/>
+</launch>

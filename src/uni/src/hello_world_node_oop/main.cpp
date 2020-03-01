@@ -8,7 +8,7 @@ int main(int argc, char **argv){
 
     ros::init(argc, argv, "hello_node_oop");
 
-    SineNode node;
+    HelloNode node;
 
     ros::Rate loopRate(10);
 

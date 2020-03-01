@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 
-class SineNode{
+class HelloNode{
 
     private:
 
@@ -9,6 +9,6 @@ class SineNode{
         ros::Publisher pub_handle;
 
     public:
-        SineNode();
+        HelloNode();
         void step();
 };

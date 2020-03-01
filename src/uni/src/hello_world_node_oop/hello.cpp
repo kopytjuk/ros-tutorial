@@ -4,13 +4,13 @@
 #include <std_msgs/String.h>
 
 
-SineNode::SineNode()
+HelloNode::HelloNode()
 {
     pub_handle = node.advertise<std_msgs::String>("hello_topic", 1000); // FIFO size 1000
     ROS_INFO("Sine node initialized!\n");
 }
 
-void SineNode::step()
+void HelloNode::step()
 {
     std_msgs::String msg;
     msg.data = "Hello OOP world!";

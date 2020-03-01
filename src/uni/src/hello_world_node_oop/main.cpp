@@ -1,12 +1,12 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 
-#include "sine.h"
+#include "hello.h"
 
 
 int main(int argc, char **argv){
 
-    ros::init(argc, argv, "sine_node_oop");
+    ros::init(argc, argv, "hello_node_oop");
 
     SineNode node;
 

@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv){
 
-    ros::init(argc, argv, "hello_node_oop");
+    ros::init(argc, argv, "sine_node");
 
     ros::NodeHandle nh;
 

@@ -20,6 +20,8 @@ Uni tasks in [./src/uni](./src/uni)
 
 - Simple hello world: [src/uni/src/hello_world_node](src/uni/src/hello_world_node)
 - OOP hello world: [src/uni/src/hello_world_node_oop](src/uni/src/hello_world_node_oop)
+- Sine wave generator node: [src/uni/src/sine_node](src/uni/src/sine_node)
+- PT1 element node: [src/uni/src/pt1-element](src/uni/src/pt1-element)
 
 See [src/uni/CMakeLists.txt](src/uni/CMakeLists.txt) how to compile the class `SineNode` located in [src/uni/src/hello_world_node_oop/sine.cpp](src/uni/src/hello_world_node_oop/sine.cpp).
 

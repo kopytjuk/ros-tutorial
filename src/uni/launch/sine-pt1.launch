@@ -1,0 +1,10 @@
+<launch>
+    <param name="sampling_time" type="double" value="0.01" />
+
+    <node pkg="uni" name="sine" type="sine_node"/>
+    <node pkg="uni" name="pt1" type="pt1_node">
+        <remap from="pt1_in" to="sine"/>
+    </node>
+
+    <node pkg="rqt_gui" name="rqt" type="rqt_gui"/>
+</launch>
